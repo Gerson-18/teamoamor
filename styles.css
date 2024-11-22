@@ -1,0 +1,221 @@
+/*asi se escriben comentarios en css*/
+
+/*creamos etiqueta body con pagina css gradient es un generador de radientes https://cssgradient.io/*/
+
+body{
+    background: rgb(190, 4, 4);
+background: linear-gradient(90deg, rgb(218, 15, 15) 0%, rgb(215, 26, 26) 35%, rgb(188, 58, 49) 100%);
+
+/*modificamos la fuente de letra font*/
+font-family: sans-serif;
+/*color de texto white*/
+color:white;
+
+}
+/* Contenedor de estadísticas */
+.estadisticas-container {
+    display: flex;
+    flex-direction: column; /* Coloca las estadísticas en una columna */
+    align-items: center; /* Centra el texto */
+    gap: 5px; /* Espacio entre las líneas */
+    margin-bottom: 10px; /* Espacio con otros elementos */
+}
+
+/* Estilos generales para las estadísticas */
+.estadisticas {
+    font-size: 0.9rem; /* Tamaño más pequeño del texto */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+    color: #333; /* Ajusta el color si es necesario */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .estadisticas {
+        font-size: 0.8rem; /* Reduce aún más el tamaño del texto */
+    }
+}
+
+
+/* styles.css */
+.neon-button {
+    margin: 30px;
+    background-color: #333;
+    font-size: 16px;
+    
+    color: #00ffcc;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: none; /* Evita que las letras estén en mayúscula */
+    font-weight: bold;
+    box-shadow: 0 0 10px #00ffcc;
+    text-align: center; /* Centra el texto horizontalmente */
+    
+     /* Hace que el botón sea un bloque para centrar verticalmente */
+    
+}
+
+
+.neon-button:hover {
+    animation: neon-pulse 1.5s infinite;
+}
+
+@keyframes neon-pulse {
+    0% {
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+    50% {
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    }
+    100% {
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+}
+
+
+/*trabajamos sobre el main que es el contenedor de las dos secciones*/
+
+main{
+    width: 730px;    /*este es el espacio de ancho de nuestro juego entre la margen de ancho*/
+    margin: 10px auto 50px;/*codigo para que tenga margen superior, y se centre de forma automatica el auto es para que el footer no quede tan abajo*/
+    display: flex;
+    align-items: center; /*esto es para centrar seccion 2*/
+
+}
+
+
+/*modificaremos la seccion 1  que conteniene los botones donde se hara clic*/
+
+.section1{
+    
+    background-color:  rgba(255, 255, 255, 0.2);  /*esto es para que aparezca como una sombra dentro de cada casilla*/
+    padding: 0 10px 10px 10px;    /*esto es para que haya espacios entre la margen*/
+    border-radius: 8px;
+}
+
+/*haremos que el h| el titulo se centre*/
+h1{
+    text-align: center;    /*el text align es para centrar*/
+}
+
+/*modificaremos bottones buttons*/
+
+button{
+    height: 100px;   /*una altura de 100 pixeles*/
+    width: 100px;    /*anchura de 100 px*/
+    font-size: 40px;   /*el tamaño de la fuente, se vera cuando se presione los botones y se muestren los valores */
+    color: black;    /*color de la fuente de los botones*/
+    font-weight: bold;   /*ancho de la letra que lo pondremos en negrita con bold*/
+}
+
+
+/*haremos que el cursor  del mouse , cuando pasemos el mouse tenga forma de mano*/
+button:hover{
+    cursor: pointer;
+}
+
+/*modificaremos la seccion 2 */
+
+.section2{
+
+    background-color: rgba(255, 255, 255, 0.2);   /*el fondo de la seccion 2  aciertos tiempo..*/
+    border-top-right-radius: 8px;      /*esto es para que los bordes cambien de forma*/
+    border-bottom-right-radius: 8px;
+    width: 250px;
+    height: 400px;
+    padding:0 20px;
+
+}
+
+
+/*modificaremos las estadisticas ,  aciertos tiempo y movimiento
+haremos que tengan border, altura,border radius, padding*/
+
+.estadisticas{
+    border: 1px solid white;
+    height: 105px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;    /*para que no se salga  nuestras estadisticas del contenedor*/
+}
+
+/*queremos que el footer este centrado*/
+
+footer{
+    text-align: center;
+}
+
+/* editamos las imagenes*/
+
+img{
+    width: 80%;  /*ancho 80 porciento de su contenido es para que se acople a nuestro cuadro*/
+}
+
+/* CSS para  adaptarlo  a dispositivos de pantalla más pequeña (móviles) */
+
+
+
+/* Diseño adaptativo para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column; /* Organiza los elementos en una columna */
+        align-items: center; /* Centra horizontalmente */
+        justify-content: flex-start; /* Alinea los elementos en la parte superior */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos adicionales */
+    }
+
+    main {
+        flex-direction: column; /* Cambia las secciones a formato de columna */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 10px; /* Espaciado interno */
+    }
+
+    .section1, .section2 {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
+        margin: 10px 0; /* Espaciado entre secciones */
+    }
+
+    .section2 {
+        order: -1; /* Mueve esta sección arriba de la sección 1 */
+        margin-bottom: 20px; /* Espacio adicional debajo de la sección */
+    }
+
+    #game-container {
+        max-width: 100%; /* Permite al contenedor ocupar todo el ancho */
+        grid-template-columns: repeat(3, 1fr); /* Reduce a 3 columnas en móviles */
+        gap: 5px; /* Espacio reducido entre las tarjetas */
+    }
+
+    .estadisticas-container {
+        display: flex;
+        justify-content: space-between; /* Distribuye los elementos de forma equitativa */
+        align-items: center; /* Centra los elementos verticalmente */
+        gap: 10px; /* Espaciado entre los elementos */
+        margin-top: 20px; /* Espacio adicional hacia abajo */
+        margin-bottom: 20px; /* Espacio extra debajo si necesario */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    
+    .estadisticas {
+        font-size: 0.9rem; /* Ajusta el tamaño de texto */
+        padding: 5px; /* Espaciado interno */
+        text-align: center; /* Centra el texto dentro de cada uno */
+        border: 1px solid rgba(255, 255, 255, 0); /* Mantiene el borde invisible */
+        border-radius: 1px; /* Bordes redondeados */
+    }
+
+    .section1 button {
+        width: 70px; /* Botones más pequeños */
+        height: 70px;
+        font-size: 24px; /* Tamaño de texto reducido */
+    }
+
+    footer {
+        margin-top: 20px; /* Espacio extra en la parte inferior */
+    }
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--llamamos nuestra ventana css-->
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>🎮Descubre El Amor De Mi Vida🎮</title>
+</head>
+
+
+
+<body>
+    <div class="reset-button-container">
+        <button class="neon-button" onclick="reiniciarJuego()">Reiniciar Juego</button>
+    </div>
+    <!--creamos un main lo dividimos en dos secciones cada una con una etiqueta diferente
+    seccion 1 botones que representan las tarjetas y seccion 2  las estadisticas del juego
+    para la seccion 1 una tabla llamado "juego de memoria
+    para crear una fuila de una tabla es tr"-->
+    <main>
+        <section class="section1">
+            <h1>Descubre El Amor De Mi Vida Jahaira🎮</h1>
+            <table>
+                <tr>
+                    <!--creamos cuatro columnas con td
+                    cada button tendra un id para poder identificarlo y editarlo
+                    el onclick es un atributo que llamaremos y crearemos en javascript
+                    para que el boton haga una accion en este caso
+                    me haga un llamado a la funcion destapar que creare en js
+                    cuando el usuario haga clic en el boton esto haga llamado a la funcion
+                    destapar, se envia un parametro (0) o (1) cada id es un parametro
+                    tener encuenta cuando se pongan el "0" y demas numeros hacerlo ordenado sin espacios ya que puede haber errores -->
+                    <td><button id ="0" onclick="destapar(0)"></button></td>
+                    <td><button id ="1" onclick="destapar(1)"></button></td>
+                    <td><button id ="2" onclick="destapar(2)"></button></td>
+                    <td><button id ="3" onclick="destapar(3)"></button></td>
+                </tr>
+                <tr>
+                    <!--creamos cuatro columnas con td-->
+                    <td><button id ="4" onclick="destapar(4)"></button></td>
+                    <td><button id ="5" onclick="destapar(5)"></button></td>
+                    <td><button id ="6" onclick="destapar(6)" ></button></td>
+                    <td><button id ="7" onclick="destapar(7)"></button></td>
+                </tr>
+                <tr>
+                    <!--creamos cuatro columnas con td-->
+                    <td><button id ="8"onclick="destapar(8)"></button></td>
+                    <td><button id ="9"onclick="destapar(9)"></button></td>
+                    <td><button id ="10"onclick="destapar(10)"></button></td>
+                    <td><button id ="11"onclick="destapar(11)"></button></td>
+                </tr>
+                <tr>
+                    <!--creamos cuatro columnas con td-->
+                    <td><button id ="12"onclick="destapar(12)"></button></td>
+                    <td><button id ="13"onclick="destapar(13)"></button></td>
+                    <td><button id ="14"onclick="destapar(14)"></button></td>
+                    <td><button id ="15"onclick="destapar(15)"></button></td>
+                </tr>
+                
+            </table>
+
+        </section>
+
+            <section class="section2">
+            <!--la seccion dos tendra el cuadro de "estadisticas" dentro  de un h2
+            llamado estadisticas y como quero que sean 3
+            la primera sran los aciertos con valor de : 0 empieza
+            la segunda un temporizador = tiempo lo ponemos con 30 segundos
+            la tercera movimientos desde 0
+            los identificamos con un id-->
+            <div class="estadisticas-container">
+                <h2 id="aciertos" class="estadisticas">Aciertos: 0</h2>
+                <h2 id="t-restante" class="estadisticas">Tiempo: 30 segundos</h2>
+                <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
+            </div>
+            
+
+        </section>
+    </main>
+
+    <!--creamos un footer-->
+
+    <footer>
+        <!--tendra un texto final dentro de un parrafo-->
+        <p>  </p>
+    </footer>
+
+    <!--llamamos nuestra ventana javascript en este caso main.js-->
+    <script src="main.js"></script>
+</body>
+</html>
